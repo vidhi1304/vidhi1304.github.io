@@ -1301,7 +1301,7 @@ footer span { color: var(--pink); }
     <a href="#projects" class="nav-btn" data-section="projects">Projects ▾</a>
     <div class="dropdown-menu" role="menu">
       <a href="#summerSqueeze" class="dropdown-item" role="menuitem">
-        <span class="d-thumb">✨</span>Summer Squeeze<span class="d-tag">New</span>
+        <span class="d-thumb"><img src="assets/summerSqueeze.png" alt="Summer Squeeze"></span>Summer Squeeze<span class="d-tag">New</span>
       </a>
       <a href="#etherealPoise" class="dropdown-item" role="menuitem">
         <span class="d-thumb"><img src="assets/etherealPoise.png" alt="Ethereal Poise"></span>
@@ -1311,7 +1311,7 @@ footer span { color: var(--pink); }
         <span class="d-thumb"><img src="assets/goldenReverie.png" alt="Golden Reverie"></span>Golden Reverie<span class="d-tag">Branding</span>
       </a>
       <a href="#frostline" class="dropdown-item" role="menuitem">
-        <span class="d-thumb"><img src="assets/frostline.png" alt="Frostline"></span>Scroll Test<span class="d-tag">Test</span>
+        <span class="d-thumb"><img src="assets/frostline.png" alt="Frostline"></span>Frostline<span class="d-tag">Test</span>
       </a>
       <a href="#test2" class="dropdown-item" role="menuitem">
         <span class="d-thumb">💀</span>Scroll Test<span class="d-tag">Test</span>
@@ -1500,7 +1500,7 @@ footer span { color: var(--pink); }
     <h2 class="sec-title" style="font-size:clamp(2rem,5vw,4rem)">Summer Squeeze</h2>
   </div>
   <div class="detail-inner">
-    <div class="detail-visual reveal fl"><span>✨</span></div>
+    <div class="detail-visual reveal fl"><span><img src="assets/summerSqueeze.png" alt="Summer Squeeze"></span></div>
     <div class="detail-info reveal fr d1">
       <div class="tape">animation &amp; motion</div>
       <h2>Beating the Summer Blues</h2>
@@ -1511,7 +1511,7 @@ footer span { color: var(--pink); }
         <span class="tech-pill">Frame-by-Frame</span>
       </div>
       <div class="proj-links">
-        <a href="#" class="btn btn-fill" data-pdf="pdfs/summerSqueeze.pdf">View Lookbook →</a>
+        <a href="#" id="view-summer-btn" class="btn btn-fill" data-pdf="pdfs/summerSqueeze.pdf">View Lookbook →</a>
         <a href="#" class="btn btn-out">Behind the Scenes</a>
       </div>
     </div>
@@ -1583,7 +1583,7 @@ footer span { color: var(--pink); }
     <h2 class="sec-title" style="font-size:clamp(2rem,5vw,4rem)">Frostline</h2>
   </div>
   <div class="detail-inner">
-    <div class="detail-visual reveal fl"><span><img src="assets/frostline.png" alt="Golden Reverie"></span></div>
+    <div class="detail-visual reveal fl"><span><img src="assets/frostline.png" alt="Frostline"></span></div>
     <div class="detail-info reveal fr d1">
       <div class="tape">Winter Chills</div>
       <h2>Frostline</h2>
@@ -1594,7 +1594,7 @@ footer span { color: var(--pink); }
         <span class="tech-pill">JavaScript</span>
       </div>
       <div class="proj-links">
-        <a href="#" class="btn btn-fill" data-pdf="pdfs/frostline.pdf">View Lookbook →</a>
+        <a href="#" id="view-frostline-btn" class="btn btn-fill" data-pdf="pdfs/frostline.pdf">View Lookbook →</a>
         <a href="#" class="btn btn-out">Behind the Scenes</a>
       </div>
     </div>
@@ -1694,7 +1694,7 @@ footer span { color: var(--pink); }
       <!-- Header strip -->
       <div class="scrap-header">
         <div class="scrap-header-left">
-          <span class="scrap-spine-label">Ethereal Poise ✦</span>
+          <span class="scrap-spine-label">LOOKBOOK ✦</span>
           <span class="scrap-year-tag">2025</span>
         </div>
         <button id="close-scrapbook" aria-label="Close lookbook">✕</button>
@@ -1937,7 +1937,7 @@ if (submitBtn) {
   const nextBtn    = document.getElementById('next-page');
   const pageInd    = document.getElementById('page-indicator');
   const closeBtn   = document.getElementById('close-scrapbook');
-  const lookbookBtn = [document.getElementById('view-poise-btn'), document.getElementById('view-reverie-btn'), document.getElementById('view-motion-btn')]
+  const lookbookBtn = [document.getElementById('view-summer-btn'), document.getElementById('view-poise-btn'), document.getElementById('view-reverie-btn'), document.getElementById('view-frostline-btn')]
 
 
   /* ── Build spiral rings ──────────────────────── */
