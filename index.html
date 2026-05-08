@@ -344,42 +344,36 @@ section {
   inset: 0;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center; /* Dynamically centers the text block vertically */
   align-items: flex-start;
-  padding: 0 2vw;
-  padding-top: clamp(60px, 15vh, 100px);
+  padding: 0;
   pointer-events: none;
   user-select: none;
   z-index: 4;
-  line-height: 0.82;
 }
-
-/* @font-face — Only needed if using this font for Name */
-@font-face {
-    font-family: 'October Twilight';
-    src: url('Octobertwilight-lzwZ.otf');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap; /* Improves performance */
-}
-
 
 .ibn-line {
-  position: relative;
-  top: 10%;
-  left: 6%;
   font-family: 'Allura', cursive;
-  font-size: clamp(8rem, 25vw, 27rem);
-  color: var(--pink);
-  display: block;
-  letter-spacing: -0.01em;
+  /* Adjusted the minimum rem size down slightly so it fits better on narrow phones */
+  font-size: clamp(5.5rem, 22vw, 27rem); 
   color: rgba(232, 151, 183, 0.65);
+  display: block;
+  /* This naturally controls the vertical overlap relative to the font size */
+  line-height: 0.75; 
+  letter-spacing: -0.01em;
   transform: translateY(0);
   transition: opacity 0.8s ease, transform 0.8s var(--bounce);
 }
 
-#ibn1 { transition-delay: 0.1s; }
-#ibn2 { transition-delay: 0.25s; }
+#ibn1 { 
+  transition-delay: 0.1s; 
+  margin-left: 6vw; /* Dynamic left margin */
+}
+
+#ibn2 { 
+  transition-delay: 0.25s; 
+  margin-left: 20vw; /* Staggers 'Bardia' to the right responsively */
+}
 
 .ibn-line.visible {
   opacity: 1;
@@ -1436,7 +1430,7 @@ footer span { color: var(--pink); }
   <!-- ① BIG NAME -->
   <div class="intro-big-name" aria-hidden="true">
     <span class="ibn-line" id="ibn1">Vidhi</span>
-    <span class="ibn-line" id="ibn2"  style="white-space: pre; margin-top: -80px" >   Bardia</span>
+    <span class="ibn-line" id="ibn2">Bardia</span>
   </div>
 
   <!-- ② CUTOUT PHOTO — swap src for your real cutout PNG -->
